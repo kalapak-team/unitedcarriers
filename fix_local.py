@@ -67,7 +67,7 @@ def download_tree() -> None:
     if main.exists():
         text = main.read_text(encoding="utf-8")
         old = '["united-carriers.webflow.io","united-carriers-bp.webflow.io","united-carriers.netlify.app","unitedcarriers.com"]'
-        new = '["united-carriers.webflow.io","united-carriers-bp.webflow.io","united-carriers.netlify.app","unitedcarriers.com","localhost","127.0.0.1"]'
+        new = '["united-carriers.webflow.io","united-carriers-bp.webflow.io","united-carriers.netlify.app","unitedcarriers.com","localhost","127.0.0.1","vercel.app"]'
         if old in text:
             main.write_text(text.replace(old, new), encoding="utf-8")
             print("Patched localhost allowlist in main.js", flush=True)
